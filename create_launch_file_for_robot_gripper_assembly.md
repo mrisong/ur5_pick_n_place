@@ -8,7 +8,7 @@ catkin_create_pkg my_robot std_msgs rospy roscpp
 ```
 
 ```bash
-cd ~/ur5e_ws
+cd ~/ur5_ws
 catkin_make
 ```
 
