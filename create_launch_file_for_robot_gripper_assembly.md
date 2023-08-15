@@ -19,7 +19,7 @@ source ~/ur5_ws/devel/setup.bash
 
 # Copy the required files in the new package
 1. Create a folder 'URDF' in 'my_robot'
-2. Copy the ur5e.xacro and robotiq_arg2f_85_macro.xacro files into the my_robot/urdf folder.
+2. Copy the ur5e_macro.xacro and robotiq_arg2f_85_macro.xacro files into the my_robot/urdf folder.
 3. Create a new xacro file called ur5e_robotiq.xacro in the urdf folder.
 
 # Create URDF assembly
@@ -28,9 +28,9 @@ Inside the new xacro file, ur5e_robotiq.xacro, copy the following code:
 ```bash
 <robot name="ur5e_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="ur5e_doc.xacro"/>
+  <xacro:include filename="ur5e_macro.xacro"/>
 
-  <xacro:include filename="robotiq_arg2f_85_macro_doc.xacro"/>
+  <xacro:include filename="robotiq_arg2f_85_macro.xacro"/>
 
 </robot>
 ```
