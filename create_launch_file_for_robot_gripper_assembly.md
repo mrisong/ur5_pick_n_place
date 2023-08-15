@@ -75,7 +75,7 @@ Inside the new xacro file, ur5e_robotiq.xacro, copy the following code:
 -->
 - Run the xacro file to generate the URDF model:
 ```bash
-rosrun xacro xacro ur5e_robotiq.xacro > ur5e_robotiq.urdf
+rosrun xacro xacro ur5e_robotiq85.xacro > ur5e_robotiq85.urdf
 ```
 
 # Create launch file for assembly
