@@ -42,7 +42,7 @@ Inside the new xacro file, ur5e_robotiq.xacro, copy the following code:
 ```bash
 <xacro:robotiq_arg2f_85 prefix="gripper_"/>
 ```
-4. Add a fixed joint connecting the gripper to the robot's wrist:
+4. Add a fixed joint connecting the gripper to the robot's wrist:[......I am updating this point currently......]
 ```bash
 <joint name="gripper_joint" type="fixed">
   <parent link="ur5e_ee_link"/>
