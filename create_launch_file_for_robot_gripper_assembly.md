@@ -24,6 +24,29 @@ source ~/ur5_ws/devel/setup.bash
 
 # Create URDF assembly
 Inside the new xacro file, ur5e_robotiq.xacro, copy the following code:
+```bash
+<?xml version="1.0"?>
+<robot name="ur5e_robotiq85" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="ur5e_macro.xacro"/>
+
+  <xacro:include filename="robotiq_arg2f_85_macro.xacro"/>
+
+  <!-- Instantiate the ur5e robot -->
+  <xacro:ur5e_robot prefix="ur5e_"/> 
+  
+  <!-- Instantiate the robotiq 85 gripper -->
+ <xacro:robotiq_arg2f_85 prefix="gripper_"/>
+ 
+   <!-- Add a fixed joint connecting the gripper to the robot wrist -->
+ <joint name="gripper_joint" type="fixed">
+  <parent link="ur5e_tool0"/>
+  <child link="gripper_base_link"/>
+</joint>
+ 
+</robot>
+```
+<!--
 1. Include the UR5e and Robotiq macro xacro files:
 ```bash
 <robot name="ur5e_robotiq" xmlns:xacro="http://www.ros.org/wiki/xacro">
@@ -42,14 +65,15 @@ Inside the new xacro file, ur5e_robotiq.xacro, copy the following code:
 ```bash
 <xacro:robotiq_arg2f_85 prefix="gripper_"/>
 ```
-4. Add a fixed joint connecting the gripper to the robot's wrist:[......I am updating this point currently......]
+4. Add a fixed joint connecting the gripper to the robot's wrist:
 ```bash
 <joint name="gripper_joint" type="fixed">
-  <parent link="ur5e_ee_link"/>
-  <child link="gripper_robotiq_arg2f_base_link"/>
+  <parent link="ur5e_tool0"/>
+  <child link="gripper_base_link"/>
 </joint>
 ```
-5. Run the xacro file to generate the URDF model:
+-->
+- Run the xacro file to generate the URDF model:
 ```bash
 rosrun xacro xacro ur5e_robotiq.xacro > ur5e_robotiq.urdf
 ```
