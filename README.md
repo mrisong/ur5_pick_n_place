@@ -51,7 +51,7 @@ rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyUSB0
 To control the gripper directly from the terminal ```rosrun robotiq_2f_gripper_control Robotiq2FGripperSimpleController.py```
 
 
-Run the vision file(it will do the vision part of ROS - segmentation and publish image on the required topic, which shall be later used by ur_copntoller.py file):
+Run the vision file(it will do the vision part of ROS - segmentation and publish image on the required topic, which shall be later used by ur5_controller.py file):
  ```bash
 rosrun image2position vision_realsense.py -m real -t bottle
  ```
