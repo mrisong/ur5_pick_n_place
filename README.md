@@ -40,7 +40,7 @@ Launch the calibration file:
 Connect the gripper
 from http://wiki.ros.org/robotiq/Tutorials/Control%20of%20a%202-Finger%20Gripper%20using%20the%20Modbus%20RTU%20protocol%20%28ros%20kinetic%20and%20newer%20releases%29
 ```bash
-usermod -a -G dialout mridulsongara
+sudo usermod -a -G dialout mridulsongara
 ```
 ```bash
 sudo dmesg | grep tty
