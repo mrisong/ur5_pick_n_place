@@ -16,7 +16,6 @@ from https://github.com/robotvisionlabs/autonomous-manipulation/blob/main/docs/U
 5. On the teach pendant, press the :arrow_forward: icon on the last used display screen from step 2.v.
 ![20230809_123137Playmarked](https://github.com/robotvisionlabs/autonomous-manipulation/assets/17614773/fe9a6d7f-6f40-4868-8b12-9a28dfde95dd)
 
-## Using MoveIt! for Motion Planning
 
 5. In a new terminal, use [MoveIt!](http://wiki.ros.org/action/show/moveit?action=show&redirect=MoveIt) to control the robot and allow motion planning[[2]](http://wiki.ros.org/universal_robot/Tutorials/Getting%20Started%20with%20a%20Universal%20Robot%20and%20ROS-Industrial):
     ```bash
@@ -30,7 +29,7 @@ from https://github.com/robotvisionlabs/autonomous-manipulation/blob/main/docs/U
     ```
 
 
-Connect the camera in the same RViz, this is used only if we need o callibrate:
+Connect the camera in the same RViz, this is used only if we need to callibrate:
  ```roslaunch realsense2_camera rs_camera.launch```
 
 Launch the calibration file:
@@ -44,3 +43,15 @@ rosrun image2position vision_realsense.py -m real -t bottle
  ```bash
 rosrun image2position ur5_commander.py -m real
  ```
+
+Connect the gripper
+from http://wiki.ros.org/robotiq/Tutorials/Control%20of%20a%202-Finger%20Gripper%20using%20the%20Modbus%20RTU%20protocol%20%28ros%20kinetic%20and%20newer%20releases%29
+```bash
+usermod -a -G dialout mridulsongara
+```
+```bash
+sudo dmesg | grep tty
+```
+```bash
+rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyUSB0
+```
