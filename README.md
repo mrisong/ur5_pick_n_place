@@ -3,7 +3,7 @@
 from https://github.com/robotvisionlabs/autonomous-manipulation/blob/main/docs/UR5Real.md
 
 
-1. Extract the calibration information from the robot - this shall provide the current parameters of the robot in a 'yaml' file[[5]](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/tree/master#prepare-the-ros-pc):
+1. Extract the calibration information from the robot - this shall provide the current parameters of the robot in a 'yaml' file[source](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/tree/master#prepare-the-ros-pc):
     ```bash
     roslaunch ur_calibration calibration_correction.launch robot_ip:=138.253.86.49 target_filename:="${HOME}/my_robot_calibration.yaml"
     ```
