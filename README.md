@@ -7,12 +7,12 @@ https://github.com/robotvisionlabs/autonomous-manipulation/blob/main/docs/UR5Rea
 
 3. Extract the calibration information from the robot - this shall provide the current parameters of the robot in a 'yaml' file[[5]](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/tree/master#prepare-the-ros-pc):
     ```bash
-    roslaunch ur_calibration calibration_correction.launch robot_ip:=<robot_ip> target_filename:="${HOME}/my_robot_calibration.yaml"
+    roslaunch ur_calibration calibration_correction.launch robot_ip:=138.253.86.49 target_filename:="${HOME}/my_robot_calibration.yaml"
     ```
 
 4. In a new terminal, start the robot driver using the existing launch file and pass the calibration information along with it:
     ```bash
-    roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=<robot_ip> kinematics_config:="${HOME}/my_robot_calibration.yaml"
+    roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=138.253.86.49 kinematics_config:="${HOME}/my_robot_calibration.yaml"
     ```
 
 5. On the teach pendant, press the :arrow_forward: icon on the last used display screen from step 2.v.
