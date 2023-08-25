@@ -1,9 +1,7 @@
 # ur5_pick_n_place
 
-from 
-```
-https://github.com/robotvisionlabs/autonomous-manipulation/blob/main/docs/UR5Real.md
-```
+from https://github.com/robotvisionlabs/autonomous-manipulation/blob/main/docs/UR5Real.md
+
 
 3. Extract the calibration information from the robot - this shall provide the current parameters of the robot in a 'yaml' file[[5]](https://github.com/UniversalRobots/Universal_Robots_ROS_Driver/tree/master#prepare-the-ros-pc):
     ```bash
