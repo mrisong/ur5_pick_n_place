@@ -36,13 +36,6 @@ Launch the calibration file:
  ```bash
  roslaunch image2position camera_pose.launch
  ```
-Run the vision file(it will do the vision part of ROS - segmentation and publish image on the required topic, which shall be later used by ur_copntoller.py file):
- ```bash
-rosrun image2position vision_realsense.py -m real -t bottle
- ```
- ```bash
-rosrun image2position ur5_commander.py -m real
- ```
 
 Connect the gripper
 from http://wiki.ros.org/robotiq/Tutorials/Control%20of%20a%202-Finger%20Gripper%20using%20the%20Modbus%20RTU%20protocol%20%28ros%20kinetic%20and%20newer%20releases%29
@@ -55,3 +48,12 @@ sudo dmesg | grep tty
 ```bash
 rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyUSB0
 ```
+
+
+Run the vision file(it will do the vision part of ROS - segmentation and publish image on the required topic, which shall be later used by ur_copntoller.py file):
+ ```bash
+rosrun image2position vision_realsense.py -m real -t bottle
+ ```
+ ```bash
+rosrun image2position ur5_commander.py -m real
+ ```
